@@ -6,10 +6,12 @@ import Navbar from './component/navbar'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [data, setdata] = useState("");
 
   const getadd = useCallback(()=>{
-    return 'another'
-  },[],);
+    const message = `hflkjf ${count}`
+    setdata(message);
+  },[data,count],);
   
   return (
     <>
@@ -27,6 +29,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <p>{data}</p>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
