@@ -5,13 +5,15 @@ function usecurrencyinfo(currency)
     const[data,setdata] = useState({})
     useEffect(() => {
       
-        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+        fetch(`https://v6.exchangerate-api.com/v6/d4456fd9c066a7bc00e27e9d/latest/{currency}`)
         .then((res) => res.json())
         .then((res) => setdata(res[currency]))
         console.log(data)
     
       
     }, [currency])
+    console.log(data)
+    return data;
     
 }
 
