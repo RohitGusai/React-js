@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link,Outlet } from 'react-router-dom';
 
 export default function Contact() {
     return (
@@ -134,6 +134,10 @@ export default function Contact() {
                             >
                                 Submit
                             </button>
+                            <Link to='123'>the user id is 123</Link>
+                            <Link to='121'>the user id is 121</Link>
+                            <Link to='124'>the user id is 124</Link>
+                            <Outlet/>
                         </form>
                     </div>
                 </div>

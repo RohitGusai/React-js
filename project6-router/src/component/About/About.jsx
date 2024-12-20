@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link,NavLink } from 'react-router-dom';
+import { Link,NavLink,Outlet } from 'react-router-dom';
+
 
 export default function About() {
     return (
@@ -25,6 +26,8 @@ export default function About() {
                             Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
                             Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
                         </p>
+                        <button className='px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'><NavLink to='rohit'>Check</NavLink></button>
+                        <Outlet/>
                     </div>
                 </div>
             </div>

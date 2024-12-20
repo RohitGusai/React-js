@@ -10,6 +10,8 @@ import Home from './component/Home/Home.jsx'
 import About from './component/About/About.jsx'
 import Contact from './component/Contact/Contact.jsx'
 import User from './component/User/User.jsx'
+import Rohit from './component/Rohit/Rohit.jsx'
+
 
 
 function App() {
@@ -36,9 +38,13 @@ function App() {
     createRoutesFromElements(
       <Route path='/' element= {<Layout />} >
         <Route path='' element = {<Home/>} />
-        <Route path='about' element = {<About/>} />
-        <Route path='contact' element = {<Contact />} />
-        <Route path='user/:userId' element = {<User/>} />
+        <Route path='about' element = {<About/>}>
+        <Route path='rohit' element={<Rohit/>}/>
+        </Route>
+        
+        <Route path='contact' element = {<Contact />} >
+        <Route path=':ids' element = {<User/>} />
+        </Route>
       </Route>
     )
   )
